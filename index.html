@@ -5,48 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="../src/styles/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
     <title>Тестовое задание</title>
   </head>
   <body>
     <header id="menu">
-      <ul class="list menu--container">
-        <li class="menu--container__buttons">
+      <ul class="list menu-container">
+        <li class="menu-buttons">
           <a href="#about">Что это такое</a>
         </li>
-        <li class="menu--container__buttons">
+        <li class="menu-buttons">
           <a href="#request">HTTP запросы</a>
         </li>
-        <li class="menu--container__buttons menu--container__small-button">
+        <li class="menu-buttons">
           <a href="#security">Защита данных</a>
         </li>
       </ul>
     </header>
     <main>
       <section class="intro">
-        <h1 class="intro--title">Протокол HTTP</h1>
-        <p class="wrapper intro--description">
+        <h1 class="intro-title">Протокол HTTP</h1>
+        <p class="wrapper intro-description">
           Вашему вниманию предлагается описание основных аспектов протокола HTTP
           — сетевого протокола, с начала 90-х и по сей день позволяющего вашему
           браузеру загружать веб-страницы.
         </p>
       </section>
       <section id="about">
-        <h2 class="section--title">Что это такое?</h2>
-        <div class="wrapper content-container">
-          <div class="content-container__style">
-            <figcaption class="about--sign">
-              схема работы HTTP протокола
-            </figcaption>
+        <h2 class="section-title">Что это такое?</h2>
+        <div class="wrapper container">
+          <div class="container-col">
+            <figcaption class="sign">схема работы HTTP протокола</figcaption>
             <img
-              src="../src/styles/pics/http2_work-480x480.png"
+              src="./pics/http2_work-480x480.png"
               alt="схема работы протокола"
               width="400"
               height="350"
               class="img"
             />
           </div>
-          <div class="content-container__style">
+          <div class="container-col">
             <p>
               «Аббревиатура HTTP расшифровывается как HyperText Transfer
               Protocol, «протокол передачи гипертекста».
@@ -61,7 +59,7 @@
               аналогичным образом.
             </p>
           </div>
-          <div class="about--lower-col__style">
+          <div class="container-lower-col">
             Задача, которая традиционно решается с помощью протокола HTTP —
             обмен данными между пользовательским приложением, осуществляющим
             доступ к веб-ресурсам (обычно это веб-браузер) и веб-сервером. На
@@ -71,14 +69,14 @@
         </div>
         <button class="btn">
           <a href="#menu">
-            <img src="./styles/pics/arrow.png" alt="arrow" />
+            <img src="./pics/arrow.png" alt="arrow" />
           </a>
         </button>
       </section>
       <section id="request">
-        <h2 class="section--title section--title__light">HTTP запросы</h2>
-        <div class="wrapper content-container">
-          <p class="content-container__style content-container__light-style">
+        <h2 class="section-title section-title__light">HTTP запросы</h2>
+        <div class="wrapper container">
+          <p class="container-col container-col__light">
             Запрос состоит из нескольких частей. Первая часть — request line.
             Вторая — заголовки. В request line мы указываем специальное слово,
             ещё говорят глагол. В HTTP описаны разные глаголы. Если говорить
@@ -88,7 +86,7 @@
             <a
               href="https://developer.mozilla.org/ru/docs/Glossary/safe"
               class="link"
-              >безопасными&nbsp</a
+              >безопасными</a
             >,&nbsp<a
               href="https://developer.mozilla.org/ru/docs/Glossary/Idempotent"
               class="link"
@@ -100,40 +98,41 @@
               class="link"
             >
               кешируемыми</a
-            >.&nbspВот некоторые примеры методов. Подробнее о методах можно
-            почитать
+            >.&nbspПодробнее о методах можно почитать
             <a
               href="https://developer.mozilla.org/ru/docs/Web/HTTP/Methods"
               class="link"
               >здесь</a
-            >.
+            >. Вот некоторые из них:
           </p>
-          <img
-            src="./styles/pics/HTTPREUESt.png"
-            alt="пример запроса"
-            width="500"
-            height="350"
-            class="img img__pads"
-          />
-
-          <div class="content-container__style content-container__light-style">
-            <ul class="section--list">
+          <div class="container-col container-col__light">
+            <figcaption class="sign">пример запроса</figcaption>
+            <img
+              src="./pics/HTTPREUESt.png"
+              alt="пример запроса"
+              width="500"
+              height="350"
+              class="img img__pads"
+            />
+          </div>
+          <div class="container-col container-col__light">
+            <ul class="section-list">
               <li value="1">
-                GET
+                <span>GET</span>
                 <div>
                   Метод GET запрашивает представление ресурса. Запросы с
                   использованием этого метода могут только извлекать данные.
                 </div>
               </li>
               <li>
-                HEAD
+                <span>HEAD</span>
                 <div>
                   HEAD запрашивает ресурс так же, как и метод GET, но без тела
                   ответа.
                 </div>
               </li>
               <li>
-                POST
+                <span>POST</span>
                 <div>
                   POST используется для отправки сущностей к определённому
                   ресурсу. Часто вызывает изменение состояния или какие-то
@@ -142,7 +141,7 @@
               </li>
             </ul>
           </div>
-          <div class="content-container__style content-container__light-style">
+          <div class="container-col container-col__light">
             <p>
               Запросы содержат следующие элементы: HTTP-метод, путь к ресурсу:
               URL ресурсы лишены элементов, которые очевидны из контекста,
@@ -156,18 +155,16 @@
         </div>
       </section>
       <section id="security">
-        <h2 class="section--title">Безопасность</h2>
-        <div class="wrapper content-container">
-          <div class="content-container__style content-container__center">
+        <h2 class="section-title">Безопасность</h2>
+        <div class="wrapper container">
+          <div class="container-col col__center">
             <img
-              src="./styles/pics/security2.jpg"
-              width="500"
-              height="350"
+              src="./pics/security2.jpg"
               alt="картинка с замком"
               class="img img__lower img__pads2"
             />
           </div>
-          <div class="content-container__style content-container__center">
+          <div class="container-col container-col__center">
             <p>
               Сам по себе протокол HTTP не предполагает использование шифрования
               для передачи информации. Поэтому внедрили HTTPS, который
@@ -179,31 +176,35 @@
               Прежде чем ответить на запрос от браузера, сервер предъявляет ключ
               — SSL-certificate. Браузер проверяет подлинность ключа в Центре
               сертификации. Если ключ «подошёл», браузер и сервер доверяют друг
-              другу и договариваются о разовом шифре. SSL-сертификат это
-              виртуальный документ, который содержит данные об организации, её
-              владельце и подтверждает их существование. Позволяет узнать сервер
-              и подтвердить безопасность сайта.
+              другу и договариваются о разовом шифре.
             </p>
           </div>
-          <div class="about--lower-col__style">
-            <ul class="section--list">
+          <div class="container-lower-col">
+            SSL-сертификат это виртуальный документ, который содержит данные об
+            организации, её владельце и подтверждает их существование. Позволяет
+            узнать сервер и подтвердить безопасность сайта.
+            <ul class="section-list">
               <li>
-                Сертификаты начального уровня с проверкой домена Domain
-                Validation (DV) При выпуске этого типа SSL проверяется только
-                право собственности на домен.
+                <span>Domain Validation (DV) </span> - cертификаты начального
+                уровня с проверкой домена При выпуске этого типа SSL проверяется
+                только право собственности на домен.
               </li>
               <li>
-                Сертификаты бизнес-класса с проверкой организации Organization
-                Validation (OV) или Company Validation (CV) При выпуске такого
-                SSL кроме проверки права собственности на домен проводится
-                проверка организации: её юридическое и физическое существование.
+                <span
+                  >Organization Validation (OV) или Company Validation
+                  (CV)</span
+                >
+                - cертификаты бизнес-класса с проверкой организации При выпуске
+                такого SSL кроме проверки права собственности на домен
+                проводится проверка организации: её юридическое и физическое
+                существование.
               </li>
               <li>
-                Сертификаты с расширенной проверкой Extended Validation (EV)
-                Этот протокол SSL также доступен только юридическим лицам. Чтобы
-                его выпустить, нужно предоставить документы в центр
-                сертификации. Проводится проверка не только существования
-                организации, но и её правовой деятельности.
+                <span> Extended Validation (EV)</span> - cертификаты с
+                расширенной проверкой. Этот протокол SSL также доступен только
+                юридическим лицам. Чтобы его выпустить, нужно предоставить
+                документы в центр сертификации. Проводится проверка не только
+                существования организации, но и её правовой деятельности.
               </li>
             </ul>
           </div>
@@ -211,8 +212,8 @@
       </section>
     </main>
     <footer class="footer">
-      <p class="footer--author">Подкатилова Ольга Владимировна</p>
-      <p class="footer--author">2022 год</p>
+      <p class="footer-info">Подкатилова Ольга Владимировна</p>
+      <p class="footer-info">2022 год</p>
     </footer>
   </body>
 </html>

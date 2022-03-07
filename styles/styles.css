@@ -1,15 +1,20 @@
 @font-face {
   font-family: "BebasNeue";
-  src: url("../styles/fonts/BebasNeue\ Regular.ttf");
+  src: url("../fonts/BebasNeue\ Regular.ttf");
 }
 @font-face {
   font-family: "BebasNeueBold";
-  src: url("../styles/fonts/BebasNeue\ Bold.ttf");
+  src: url("../fonts/BebasNeue\ Bold.ttf");
 }
 
 #menu {
   background-color: #589bc6;
   font-family: "BebasNeueBold", sans-serif;
+}
+
+span {
+  color: #192e42;
+  font-weight: bold;
 }
 
 .list {
@@ -23,29 +28,29 @@
   position: relative;
   top: 50px;
 }
-.menu--container {
+.menu-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: baseline;
   height: 30%;
-  padding: 2rem;
+  padding: 25px;
   margin: 0;
 }
 
-.menu--container__buttons {
-  font-size: 4vh;
-  padding-right: 2rem;
-  padding-left: 2rem;
+.menu-buttons {
+  font-size: 40px;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
-.menu--container__buttons a {
+.menu-buttons a {
   text-decoration: none;
   color: white;
   transition: all 0.6s ease;
 }
 
-.menu--container__buttons a:hover {
+.menu-buttons a:hover {
   color: rgb(28, 66, 110);
 }
 
@@ -58,7 +63,7 @@
 .intro {
   position: relative;
   width: 100%;
-  height: 50em;
+
   font-size: 24px;
   font-family: "BebasNeue", sans-serif;
   display: flex;
@@ -67,13 +72,14 @@
   align-content: space-evenly;
 }
 
-.intro--title {
-  margin: 0;
+.intro-title {
   color: #589bc6;
-  font-size: 10vh;
+  font-size: 95px;
   z-index: 1;
   width: 100%;
   text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .intro::before {
@@ -88,63 +94,69 @@
   opacity: 0.1;
 }
 
-.intro--description {
-  margin: 0;
+.intro-description {
   color: #589bc6;
-  font-size: 5vh;
+  font-size: 45px;
   text-align: center;
-  line-height: 4rem;
+  line-height: 55px;
   width: 100%;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
 #about {
   background-color: #f6fbff;
 }
 
-.about--sign {
+.sign {
   margin: 0;
-  font-size: 1rem;
+  font-size: 20px;
   text-align: center;
 }
-.section--title {
+
+.section-title {
   text-align: center;
-  font-size: 6vh;
+  font-size: 55px;
   font-family: "BebasNeue", sans-serif;
   color: #589bc6;
   margin: 0;
   padding-top: 5%;
 }
-.content-container {
+.container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 1%;
 }
 
-.content-container__style {
+.container-col {
   width: 45%;
-  font-size: 3vh;
+  font-size: 27px;
   font-family: "BebasNeue", sans-serif;
   color: #589bc6;
-  line-height: 2rem;
+  line-height: 35px;
   flex-shrink: 1;
   flex-grow: 1;
+
+  text-align: justify;
 }
 
-.content-container__style p {
+.container-col p {
   margin-bottom: 0;
 }
 
-.section--list {
+.section-list {
   padding-left: 0;
 }
-.about--lower-col__style {
-  font-size: 3vh;
+.container-lower-col {
+  font-size: 27px;
   font-family: "BebasNeue", sans-serif;
   color: #589bc6;
-  line-height: 2rem;
+  line-height: 35px;
   padding-bottom: 5%;
   padding-top: 30px;
+  text-align: justify;
 }
 #request {
   background-color: #589bc6;
@@ -156,20 +168,24 @@
 .link:hover {
   color: #ffffff;
 }
-.content-container__light-style {
+.container-col__light {
   color: white;
   padding-bottom: 5%;
-  padding-right: 30px;
 }
-.section--title__light {
+.container-col__light:nth-child(even) {
+  padding-left: 30px;
+}
+
+.section-title__light {
   color: white;
 }
 #security {
   background-color: #f6fbff;
 }
 .btn {
-  width: 10vh;
-  height: 6vh;
+  width: 100px;
+  height: 50px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,54 +206,124 @@
   text-align: center;
 }
 
-.footer--author {
+.footer-info {
   font-family: "BebasNeueBold", sans-serif;
-  font-size: 4vh;
+  font-size: 35px;
   color: white;
-  padding-top: 1rem;
+  padding-top: 15px;
   margin: 0;
 }
-.footer--author:nth-child(even) {
+.footer-info:nth-child(even) {
   padding-bottom: 1rem;
-  font-size: 3vh;
+  font-size: 30px;
   border-top: solid #306688 1px;
 }
 
 Img {
-  max-width: 100%;
+  max-width: 90%;
   flex-grow: 1;
+  border-radius: 30px;
+  display: block;
+  margin: auto;
 }
 
 @media (max-width: 479px) {
-  .content-container__style {
+  .container-col {
     width: 100%;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .container-col__light:nth-child(even) {
+    padding-left: 0;
+  }
+  .container-lower-col {
+    font-size: 20px;
+    line-height: 23px;
   }
   .wrapper {
     margin-right: 10%;
     margin-left: 10%;
   }
-  .menu--container__buttons {
-    padding-right: 2rem;
-    padding-left: 2rem;
+  .intro-title {
+    font-size: 45px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .intro-description {
+    font-size: 30px;
+
+    line-height: 45px;
+    width: 100%;
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 75px;
+  }
+  .menu-buttons {
+    padding-right: 10px;
+    padding-left: 10px;
     flex-grow: 1;
     flex-shrink: 1;
-    font-size: 2vh;
+    font-size: 20px;
   }
   .btn {
-    width: 10vh;
-    height: 6vh;
-    left: 45vh;
+    padding-top: 5px;
+    width: 50px;
+    height: 25px;
+    top: 95%;
+    left: 80%;
   }
   .img__lower {
     position: static;
   }
+  Img {
+    max-width: 100%;
+    flex-grow: 1;
+  }
+  Img:nth-child(even) {
+    height: 80%;
+    max-width: 90%;
+  }
   .intro::before {
     background-image: url(https://img1.akspic.ru/originals/2/0/7/9/29702-shema_podklyucheniya-tehnologia-elektricheskie_seti-tekst-liniya-1080x1920.jpg);
+  }
+  .section-title {
+    font-size: 45px;
+  }
+  .footer-info {
+    font-size: 25px;
+
+    padding-top: 10px;
+  }
+  .footer-info:nth-child(even) {
+    padding-bottom: 15px;
+    font-size: 20px;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
-  .content-container__style {
+  .container-col {
     width: 100%;
+
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .container-col__light {
+    padding-left: 0px;
+  }
+  .intro--title {
+    font-size: 50px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .intro--description {
+    font-size: 35px;
+
+    line-height: 45px;
+    width: 100%;
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 75px;
   }
   .intro::before {
     background-image: url(https://img1.akspic.ru/originals/2/0/7/9/29702-shema_podklyucheniya-tehnologia-elektricheskie_seti-tekst-liniya-1080x1920.jpg);
@@ -247,12 +333,20 @@ Img {
     margin-left: 10%;
   }
   .btn {
-    width: 10vh;
-    height: 6vh;
-    left: 85vh;
+    padding-top: 5px;
+    width: 50px;
+    height: 25px;
+    top: 95%;
+    left: 80%;
   }
   .img__lower {
     position: static;
+    display: block;
+    margin: 0 auto;
+  }
+  .container-lower-col {
+    font-size: 20px;
+    line-height: 23px;
   }
 }
 
@@ -260,26 +354,30 @@ Img {
   .intro::before {
     background-image: url(https://img1.akspic.ru/originals/2/0/7/9/29702-shema_podklyucheniya-tehnologia-elektricheskie_seti-tekst-liniya-1080x1920.jpg);
   }
-  .content-container__style {
+  .container-col {
     width: 100%;
   }
-  .content-container__style:nth-child(1) {
-    text-align: center;
+  .container-col__light:nth-child(even) {
+    padding-left: 0px;
   }
-  .content-container__light-style:nth-child(1) {
-    text-align: left;
-  }
+
   .wrapper {
     margin-right: 10%;
     margin-left: 10%;
   }
   .btn {
-    width: 10vh;
-    height: 6vh;
-    left: 85vh;
+    padding-top: 5px;
+    width: 50px;
+    height: 25px;
+    top: 95%;
+    left: 80%;
   }
   .img__lower {
     position: static;
+  }
+  .img {
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -292,16 +390,16 @@ Img {
     max-width: 100%;
     flex-grow: 1;
   }
-  .img__pads {
+  /* .img__pads {
     width: 50%;
-  }
+  } */
   .img__lower {
     position: static;
   }
-  .content-container__center {
+  .container-col__center {
     width: 100%;
   }
-  .content-container__center:nth-child(1) {
+  .container-col__center:nth-child(1) {
     text-align: center;
   }
 }
