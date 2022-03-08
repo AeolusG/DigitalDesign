@@ -2,5 +2,5 @@
 
 Верстка лендинга по протоколу HTTP.
 
-Ссылка на githubPages:
-https://aeolusg.github.io/DigitalDesign/src/index.html
+Ссылка на GitHubPages:
+https://aeolusg.github.io/DigitalDesign/index.html
