@@ -8,10 +8,11 @@
 }
 
 #menu {
+}
+.menu {
   background-color: #589bc6;
   font-family: "BebasNeueBold", sans-serif;
 }
-
 span {
   color: #192e42;
   font-weight: bold;
@@ -106,9 +107,10 @@ span {
 }
 
 #about {
+}
+.about {
   background-color: #f6fbff;
 }
-
 .sign {
   margin: 0;
   font-size: 20px;
@@ -159,6 +161,8 @@ span {
   text-align: justify;
 }
 #request {
+}
+.request {
   background-color: #589bc6;
 }
 .link {
